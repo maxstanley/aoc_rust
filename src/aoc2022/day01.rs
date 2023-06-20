@@ -6,7 +6,7 @@ pub fn part01(lines: &str) -> Result<usize> {
     lines
         .split("\n\n")
         .into_iter()
-        .map(|v| v.split("\n").filter_map(|n| n.parse::<usize>().ok()).sum())
+        .map(|v| v.split('\n').filter_map(|n| n.parse::<usize>().ok()).sum())
         .max()
         .context("no maximum value")
 }
@@ -16,7 +16,7 @@ pub fn part02(lines: &str) -> Result<usize> {
         .split("\n\n")
         .into_iter()
         .map(|v| {
-            v.split("\n")
+            v.split('\n')
                 .filter_map(|n| n.parse::<usize>().ok())
                 .sum::<usize>()
         })
